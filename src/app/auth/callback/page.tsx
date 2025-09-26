@@ -4,7 +4,7 @@ import React from 'react'
 
 type Props = {}
 
-const DashboardPage = async (props: Props) => {
+const AuthCallbackPage = async (props: Props) => {
   const auth = await onAuthenticateUser()
   if(auth.status === 200 || auth.status === 201){
     return redirect(`/dashboard/${auth.user?.workspace[0].id}`)
@@ -14,4 +14,4 @@ const DashboardPage = async (props: Props) => {
   }
 }
 
-export default DashboardPage
+export default AuthCallbackPage
